@@ -24,10 +24,13 @@ jobs:
       - name: Azure Login
         uses: azure/login@v2
         with:
-          client-id: "6f684002-5e6b-46a0-860f-117435208139"
-          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
-          tenant-id: "d73b8547-0c7c-4052-98a9-e6e952273a62"
-          subscription-id: "3db1461e-a110-4c9d-b193-6df37b3a4a76"
+          creds: |
+            {
+              "clientId": "${{ secrets.AZURE_CLIENT_ID }}",
+              "clientSecret": "${{ secrets.AZURE_CLIENT_SECRET }}",
+              "subscriptionId": "${{ secrets.AZURE_SUBSCRIPTION_ID }}",
+              "tenantId": "${{ secrets.AZURE_TENANT_ID }}"
+            }
 
       - name: Terraform Init
         run: terraform init
