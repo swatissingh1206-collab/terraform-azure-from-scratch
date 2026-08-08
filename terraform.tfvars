@@ -39,20 +39,6 @@ snets = {
   }
 }
 
-# pips = {
-#   vm1 = {
-#     pip_name          = "frontend_pip"
-#     rg_name           = "rg123"
-#     location          = "centralindia"
-#     allocation_method = "Static"
-#   }
-#     vm2 = {
-#     pip_name          = "backend_pip"
-#     rg_name           = "rg123"
-#     location          = "centralindia"
-#     allocation_method = "Static"
-#   }
-# }
 vms = {
   vm1 = {
     vm_name                   = "frontendvm"
