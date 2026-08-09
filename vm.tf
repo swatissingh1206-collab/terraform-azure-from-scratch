@@ -10,8 +10,8 @@ resource "azurerm_network_interface" "nic-dev" {
   resource_group_name = each.value.rg_name
   location            = each.value.location
   ip_configuration {
-    name      = each.value.nic_ip_name
-    subnet_id = azurerm_subnet.snet-dev[each.value.subnet_key].id
+    name                          = each.value.nic_ip_name
+    subnet_id                     = azurerm_subnet.snet-dev[each.value.subnet_key].id
     private_ip_address_allocation = each.value.pvt_ip_address_allocation
   }
 }
