@@ -22,7 +22,7 @@ output "vm_ids" {
 
 output "vm_private_ips" {
   value = {
-    for k, v in azurerm_network_interface.nic :
+    for k, v in azurerm_network_interface.nic-dev :
     k => v.private_ip_address
   }
 }
