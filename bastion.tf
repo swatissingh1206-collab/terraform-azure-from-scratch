@@ -1,4 +1,8 @@
 resource "azurerm_bastion_host" "bastion-dev" {
+  depends_on = [
+    azurerm_subnet.snet-dev,
+    azurerm_public_ip.pip-dev
+  ]
   for_each            = var.bastions
   name                = each.value.bastion_name
   resource_group_name = each.value.rg_name
@@ -12,6 +16,9 @@ resource "azurerm_bastion_host" "bastion-dev" {
 }
 
 resource "azurerm_public_ip" "pip-dev" {
+  depends_on = [
+    azurerm_resource_group.rg-dev
+  ]
   for_each            = var.bastions
   name                = each.value.pip_name
   resource_group_name = each.value.rg_name
