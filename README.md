@@ -38,7 +38,7 @@ This project dynamically provisions and manages multi-tier Azure infrastructure 
 ├── 📄 rg.tf                      # 📦 Azure Resource Group definitions
 ├── 📄 vm.tf                      # 🖥️ Linux Virtual Machine & NIC definitions
 ├── 📄 provider.tf                # 🔌 AzureRM Provider setup
-├── 📄 version.tf                 # 📌 Terraform engine & provider version constraints
+├── 📄 version.tf                 # 📌 Terraform engine, providers & Remote Azure Blob Backend
 ├── 📄 variable.tf                # 📥 Terraform input variable declarations
 ├── 📄 output.tf                  # 📤 Terraform output value exports
 ├── 📄 terraform.tfvars           # ⚙️ Infrastructure parameter values & map objects
